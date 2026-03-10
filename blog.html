@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Blog | Gordon Landscaping Company | Ottawa</title>
+  <meta name="description" content="Landscaping tips and guides for Ottawa homeowners: sod, interlock, artificial turf, and project planning." />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://gordonlandscaping.ca/blog.html" />
+  <link rel="icon" href="assets/images/logo.png" type="image/png" />
+
+  <meta property="og:title" content="Blog | Gordon Landscaping Company" />
+  <meta property="og:description" content="Landscaping tips and guides for Ottawa homeowners." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gordonlandscaping.ca/blog.html" />
+  <meta property="og:image" content="https://gordonlandscaping.ca/assets/images/hero.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://gordonlandscaping.ca/assets/images/hero.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['DM Sans','ui-sans-serif','system-ui','sans-serif'],heading:['Fraunces','Georgia','serif']}}}};</script>
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+
+<body class="bg-animated text-slate-900">
+  <div class="border-b border-slate-200 bg-white/70 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 text-sm text-slate-600">
+      <div class="flex items-center gap-3">
+        <a class="hover:text-slate-900" href="tel:16137209102">613-720-9102</a>
+        <span class="text-slate-300">|</span>
+        <a class="hover:text-slate-900" href="mailto:matthew@gordonlandscaping.ca">matthew@gordonlandscaping.ca</a>
+      </div>
+      <div class="hidden sm:block">Ottawa • Kanata • Stittsville • Orléans • Nepean • Barrhaven • Carp • Carleton Place • Calabogie • Arnprior • Perth • Lanark</div>
+    </div>
+  </div>
+  <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/70 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/images/logo.png" alt="Gordon Landscaping Company logo" class="h-10 w-10 object-contain" />
+        <div class="leading-tight">
+          <div class="font-heading font-semibold tracking-tight">Gordon Landscaping</div>
+          <div class="text-xs text-slate-500">Ottawa, Ontario</div>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-600">
+        <a class="hover:text-slate-900" href="services.html">Services</a>
+        <a class="hover:text-slate-900" href="projects.html">Projects</a>
+        <a class="hover:text-slate-900" href="gallery.html">Gallery</a>
+        <a class="hover:text-slate-900" href="blog.html">Blog</a>
+        <a class="hover:text-slate-900" href="about.html">About</a>
+        <a class="hover:text-slate-900" href="contact.html">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="glow hidden sm:inline-flex items-center justify-center rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800">Request a Quote</a>
+        <a href="tel:16137209102" class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-900 hover:bg-white">Call</a>
+        <button id="nav-toggle" type="button" aria-label="Toggle menu" class="md:hidden inline-flex items-center justify-center rounded-xl border border-slate-300 p-2.5 text-slate-700 hover:bg-slate-50">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div id="mobile-nav-overlay" class="mobile-nav-overlay fixed inset-0 z-40 bg-slate-900/60 backdrop-blur-sm md:hidden" aria-hidden="true"></div>
+  <nav id="mobile-nav" class="mobile-nav fixed top-0 right-0 z-50 h-full w-72 max-w-[85vw] border-l border-slate-200 bg-white shadow-2xl md:hidden" aria-label="Mobile navigation">
+    <div class="flex flex-col gap-1 p-6 pt-16">
+      <a href="services.html" class="mobile-nav rounded-xl px-4 py-3 text-slate-700 font-medium hover:bg-slate-100">Services</a>
+      <a href="projects.html" class="mobile-nav rounded-xl px-4 py-3 text-slate-700 font-medium hover:bg-slate-100">Projects</a>
+      <a href="gallery.html" class="mobile-nav rounded-xl px-4 py-3 text-slate-700 font-medium hover:bg-slate-100">Gallery</a>
+      <a href="blog.html" class="mobile-nav rounded-xl px-4 py-3 text-slate-700 font-medium hover:bg-slate-100">Blog</a>
+      <a href="about.html" class="mobile-nav rounded-xl px-4 py-3 text-slate-700 font-medium hover:bg-slate-100">About</a>
+      <a href="contact.html" class="mobile-nav rounded-xl px-4 py-3 text-slate-700 font-medium hover:bg-slate-100">Contact</a>
+      <a href="tel:16137209102" class="mt-4 rounded-xl bg-slate-900 px-4 py-3 text-white font-semibold text-center">Call 613-720-9102</a>
+      <a href="contact.html" class="mobile-nav rounded-xl border border-slate-300 px-4 py-3 text-slate-900 font-semibold text-center">Request a Quote</a>
+    </div>
+  </nav>
+
+  <main class="mx-auto max-w-6xl px-4 py-14">
+    <div class="reveal">
+      <h1 class="font-heading text-3xl font-semibold tracking-tight sm:text-5xl">Blog</h1>
+      <p class="mt-4 text-slate-600 max-w-3xl">
+        Simple guides for Ottawa homeowners on sod, interlock, and artificial turf — plus what to expect during a project.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-6 lg:grid-cols-3">
+      <a href="blog/sod-installation-ottawa.html" class="reveal card overflow-hidden rounded-3xl border border-slate-200 bg-white hover:bg-white">
+        <img src="assets/images/sod-1.jpg" alt="Sod installation in Ottawa" class="h-44 w-full object-cover" loading="lazy" />
+        <div class="p-7">
+          <div class="text-xs font-semibold text-emerald-700">Sod</div>
+          <h2 class="mt-2 font-heading text-lg font-semibold">Sod Installation in Ottawa: What to Expect</h2>
+          <p class="mt-2 text-sm text-slate-600">Prep, watering, timing, and how to get a smooth lawn that establishes fast.</p>
+          <div class="mt-5 text-sm font-semibold text-teal-700">Read →</div>
+        </div>
+      </a>
+      <a href="blog/interlock-cost-ottawa.html" class="reveal card overflow-hidden rounded-3xl border border-slate-200 bg-white hover:bg-white">
+        <img src="assets/images/interlock-1.jpg" alt="Interlock patio in Ottawa" class="h-44 w-full object-cover" loading="lazy" />
+        <div class="p-7">
+          <div class="text-xs font-semibold text-emerald-700">Interlock</div>
+          <h2 class="mt-2 font-heading text-lg font-semibold">Interlock Cost in Ottawa: What Impacts Price</h2>
+          <p class="mt-2 text-sm text-slate-600">A real breakdown of the variables: base, access, stone choice, and design.</p>
+          <div class="mt-5 text-sm font-semibold text-teal-700">Read →</div>
+        </div>
+      </a>
+      <a href="blog/artificial-turf-ottawa.html" class="reveal card overflow-hidden rounded-3xl border border-slate-200 bg-white hover:bg-white">
+        <img src="assets/images/turf-1.jpg" alt="Artificial turf in Ottawa" class="h-44 w-full object-cover" loading="lazy" />
+        <div class="p-7">
+          <div class="text-xs font-semibold text-emerald-700">Turf</div>
+          <h2 class="mt-2 font-heading text-lg font-semibold">Artificial Turf in Ottawa: Pros, Cons & Drainage</h2>
+          <p class="mt-2 text-sm text-slate-600">When turf makes sense, what to avoid, and why base prep is everything.</p>
+          <div class="mt-5 text-sm font-semibold text-teal-700">Read →</div>
+        </div>
+      </a>
+    </div>
+
+    <section class="mt-14 reveal overflow-hidden rounded-[28px] border border-slate-200 bg-white p-8 sm:p-10">
+      <h2 class="font-heading text-2xl font-semibold">Want a quote instead?</h2>
+      <p class="mt-3 text-slate-600">Send photos + rough dimensions and we’ll reply with a clear scope and timeline.</p>
+      <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+        <a href="contact.html" class="glow rounded-2xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white hover:bg-slate-800">Request a Quote</a>
+        <a href="tel:16137209102" class="rounded-2xl border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-50">Call 613-720-9102</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white/70 backdrop-blur">
+    <div class="mx-auto max-w-6xl px-4 py-10">
+      <div class="grid gap-8 md:grid-cols-3">
+        <div>
+          <div class="font-heading text-lg font-semibold">Gordon Landscaping Company</div>
+          <p class="mt-2 text-sm text-slate-600">Sod • Interlock • Artificial Turf</p>
+          <p class="mt-4 text-sm text-slate-700">
+            <a class="hover:text-slate-900" href="tel:16137209102">613-720-9102</a><br/>
+            <a class="hover:text-slate-900" href="mailto:matthew@gordonlandscaping.ca">matthew@gordonlandscaping.ca</a>
+          </p>
+        </div>
+        <div class="text-sm text-slate-700">
+          <div class="font-semibold text-slate-900">Pages</div>
+          <ul class="mt-3 space-y-2">
+            <li><a class="hover:text-slate-900" href="services.html">Services</a></li>
+            <li><a class="hover:text-slate-900" href="projects.html">Projects</a></li>
+            <li><a class="hover:text-slate-900" href="about.html">About</a></li>
+            <li><a class="hover:text-slate-900" href="contact.html">Request a Quote</a></li>
+          </ul>
+        </div>
+        <div class="text-sm text-slate-700">
+          <div class="font-semibold text-slate-900">Service area</div>
+          <p class="mt-3 text-slate-600">Ottawa, Ontario and surrounding areas: Kanata, Stittsville, Orléans, Nepean, Barrhaven, Carp, Carleton Place, Calabogie, Arnprior, Perth, Lanark.</p>
+        </div>
+      </div>
+      <div class="mt-10 flex flex-col gap-2 border-t border-slate-200 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <div>© <span id="year"></span> Gordon Landscaping Company. All rights reserved.</div>
+        <div>Ottawa • Kanata • Stittsville • Orléans • Nepean • Barrhaven • Carp • Carleton Place • Calabogie • Arnprior • Perth • Lanark</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/site.js"></script>
+</body>
+</html>
