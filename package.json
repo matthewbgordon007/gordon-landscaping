@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "optimize-images": "node scripts/optimize-images.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +21,9 @@
   "homepage": "https://github.com/matthewbgordon007/gordon-landscaping#readme",
   "dependencies": {
     "resend": "^6.12.4"
+  },
+  "devDependencies": {
+    "heic-convert": "^2.1.0",
+    "sharp": "^0.34.5"
   }
 }
