@@ -28,6 +28,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
+  <!-- Preload LCP hero image -->
+  <link rel="preload" as="image" href="assets/images/hero.jpg" fetchpriority="high" />
+
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -52,22 +55,38 @@
 
   <link rel="stylesheet" href="assets/site.css" />
   <link rel="icon" href="assets/images/logo.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/images/logo.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#1e5631" />
 
   <!-- LocalBusiness schema -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"LocalBusiness",
+    "@type":["LocalBusiness","HomeAndConstructionBusiness"],
+    "@id":"https://gordonlandscaping.ca/#business",
     "name":"Gordon Landscaping Company",
     "image":"https://gordonlandscaping.ca/assets/images/hero.jpg",
+    "logo":"https://gordonlandscaping.ca/assets/images/logo.png",
+    "url":"https://gordonlandscaping.ca/",
     "telephone":"+1-613-720-9102",
     "email":"matthew@gordonlandscaping.ca",
+    "priceRange":"$$",
+    "currenciesAccepted":"CAD",
     "address":{
       "@type":"PostalAddress",
       "addressLocality":"Ottawa",
       "addressRegion":"ON",
       "addressCountry":"CA"
     },
+    "geo":{
+      "@type":"GeoCoordinates",
+      "latitude":45.4215,
+      "longitude":-75.6972
+    },
+    "sameAs":[
+      "https://g.page/gordonlandscaping"
+    ],
     "areaServed":[
       "Ottawa, Ontario","Kanata, Ontario","Stittsville, Ontario","Orléans, Ontario","Nepean, Ontario","Barrhaven, Ontario","Carp, Ontario","Carleton Place, Ontario","Calabogie, Ontario","Arnprior, Ontario","Perth, Ontario","Lanark, Ontario"
     ],
@@ -177,7 +196,7 @@
   <!-- Hero - Full-height impact -->
   <section class="relative min-h-[85vh] flex items-center overflow-hidden">
     <div class="absolute inset-0 -z-10">
-      <img src="assets/images/hero.jpg" alt="" class="h-full w-full object-cover opacity-25" />
+      <img src="assets/images/hero.jpg" alt="" width="1920" height="1440" fetchpriority="high" class="h-full w-full object-cover opacity-25" />
       <div class="absolute inset-0 bg-gradient-to-b from-cream/95 via-cream/90 to-cream"></div>
     </div>
     <div class="mx-auto max-w-6xl w-full px-4 py-20">
@@ -232,7 +251,7 @@
         <div class="relative reveal" style="transition-delay: 150ms;">
           <div class="absolute -inset-8 rounded-3xl bg-forest/15 blur-3xl"></div>
           <div class="hero-media-wrapper relative overflow-hidden rounded-2xl border-2 border-sage/20 bg-cream-dark/50 shadow-2xl ring-2 ring-forest/10">
-            <img src="assets/images/hero.jpg" alt="Landscaping project in Ottawa" class="h-[360px] w-full object-cover sm:h-[440px]" />
+            <img src="assets/images/hero.jpg" alt="Premium landscaping project in Ottawa by Gordon Landscaping" width="1920" height="1440" class="h-[360px] w-full object-cover sm:h-[440px]" />
           </div>
           <div class="mt-4 grid grid-cols-3 gap-3 text-xs text-stone">
             <div class="card rounded-2xl border-2 border-sage/20 bg-cream-dark/30 px-3 py-3">

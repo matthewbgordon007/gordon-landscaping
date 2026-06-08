@@ -1,0 +1,21 @@
+{
+  "name": "Gordon Landscaping Company",
+  "short_name": "Gordon Landscaping",
+  "description": "Premium sod, interlock, artificial turf, decks, and custom builds in Ottawa and surrounding areas.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f6f1",
+  "theme_color": "#1e5631",
+  "icons": [
+    {
+      "src": "/assets/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
