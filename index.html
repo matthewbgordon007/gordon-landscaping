@@ -38,15 +38,16 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Nunito Sans','ui-sans-serif','system-ui','sans-serif'],
-            heading: ['Cormorant Garamond','Georgia','serif']
+            sans: ['Barlow', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            heading: ['Bebas Neue', 'Oswald', 'ui-sans-serif', 'sans-serif']
           },
           colors: {
-            forest: { DEFAULT: '#1e5631', light: '#2d7a42', dark: '#153d22' },
-            sage: { DEFAULT: '#5a7d5c', light: '#7a9e7e' },
-            stone: '#6b6256',
-            earth: '#5c4a3d',
-            cream: { DEFAULT: '#f8f6f1', dark: '#ebe7df' }
+            forest: { DEFAULT: '#c6f04a', light: '#d9ff6b', dark: '#9bc02e' },
+            sage: { DEFAULT: '#2a2a2a', light: '#3d3d3d' },
+            stone: '#8a8a8a',
+            earth: '#f0f0f0',
+            cream: { DEFAULT: '#141414', dark: '#0a0a0a' },
+            charcoal: { DEFAULT: '#1c1c1c', light: '#252525' }
           }
         }
       }
@@ -57,7 +58,7 @@
   <link rel="icon" href="assets/images/logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="assets/images/logo.png" />
   <link rel="manifest" href="site.webmanifest" />
-  <meta name="theme-color" content="#1e5631" />
+  <meta name="theme-color" content="#141414" />
 
   <!-- LocalBusiness schema -->
   <script type="application/ld+json">
@@ -123,7 +124,7 @@
 <body class="bg-animated text-earth">
   <!-- Seasonal banner -->
   <div class="bg-forest text-cream text-center py-2 px-4 text-sm font-medium">
-    <span class="hidden sm:inline">🌿 Spring 2025 — </span>Built Outdoors — fencing, decks, interlock, sod, turf & custom builds. <a href="contact.html" class="underline font-semibold hover:text-cream/90 ml-1">Get a free quote →</a>
+    <span class="hidden sm:inline">BUILT OUTDOORS — </span>Fencing • Decks • Interlock • Sod • Turf • Custom Builds <a href="contact.html" class="underline font-bold hover:opacity-80 ml-1">GET A QUOTE →</a>
   </div>
 
   <!-- Top bar -->
@@ -149,9 +150,10 @@
           alt="Gordon Landscaping Company logo"
           class="h-10 w-10 object-contain"
         />
-        <div class="leading-tight">
-          <div class="font-heading font-semibold tracking-tight">Gordon Landscaping</div>
-          <div class="text-[10px] font-semibold uppercase tracking-[0.18em] text-forest">Built Outdoors</div>
+          <div class="leading-tight">
+          <div class="font-heading text-lg tracking-[0.06em] text-earth">Gordon</div>
+          <div class="font-heading text-sm tracking-[0.22em] text-forest">Landscaping</div>
+          <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-stone">Built Outdoors.</div>
           <div class="text-xs text-stone">Ottawa, Ontario</div>
         </div>
       </a>
@@ -199,24 +201,28 @@
 
   <!-- Hero - Full-height impact -->
   <section class="relative min-h-[85vh] flex items-center overflow-hidden">
+    <div class="hero-watermark hidden lg:block" aria-hidden="true"></div>
     <div class="absolute inset-0 -z-10">
-      <img src="assets/images/hero.jpg?v=20260608" alt="" width="1920" height="1440" fetchpriority="high" class="h-full w-full object-cover opacity-25" />
-      <div class="absolute inset-0 bg-gradient-to-b from-cream/95 via-cream/90 to-cream"></div>
+      <img src="assets/images/hero.jpg?v=20260608" alt="" width="1920" height="1440" fetchpriority="high" class="h-full w-full object-cover opacity-40 saturate-125 contrast-110" />
+      <div class="absolute inset-0 bg-gradient-to-b from-charcoal via-charcoal/95 to-charcoal"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-charcoal via-transparent to-charcoal/80"></div>
     </div>
     <div class="mx-auto max-w-6xl w-full px-4 py-20">
       <div class="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
         <div class="reveal">
-          <p class="inline-flex items-center gap-2 rounded-full border border-sage/30 bg-cream/80 backdrop-blur px-4 py-2 text-xs text-stone shadow-sm">
-            <span class="stat-dot h-2 w-2 animate-pulse rounded-full bg-forest"></span>
+          <p class="badge-rugged inline-flex items-center gap-2 border border-forest/60 bg-charcoal-light px-5 py-2 text-xs font-bold uppercase tracking-[0.28em] text-forest shadow-[0_0_20px_rgba(198,240,74,0.15)]">
+            <span class="stat-dot h-2 w-2 animate-pulse"></span>
             Built Outdoors
           </p>
 
-          <h1 class="mt-8 font-heading text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-            Your One-Stop Shop for Outdoor Spaces in Ottawa
+          <h1 class="hero-display mt-6 text-5xl sm:text-6xl lg:text-7xl text-earth">
+            One-Stop Shop<br class="hidden sm:block" /> for Outdoor Spaces
           </h1>
+          <div class="accent-bar mt-5 w-28"></div>
+          <p class="mt-4 text-sm font-bold uppercase tracking-[0.2em] text-forest">Ottawa &amp; Surrounding Area</p>
 
-          <p class="mt-6 text-lg text-stone max-w-xl">
-            Fencing, decks, interlock, sod, turf, and custom structures — one team handles it all to transform your outdoor spaces from front to back.
+          <p class="mt-6 text-base sm:text-lg text-stone max-w-xl leading-relaxed">
+            Fencing, decks, interlock, sod, turf, and custom structures — one crew handles it all to transform your property from front to back.
           </p>
 
           <div class="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -257,8 +263,8 @@
         </div>
 
         <div class="relative reveal" style="transition-delay: 150ms;">
-          <div class="absolute -inset-8 rounded-3xl bg-forest/15 blur-3xl"></div>
-          <div class="hero-media-wrapper relative overflow-hidden rounded-2xl border-2 border-sage/20 bg-cream-dark/50 shadow-2xl ring-2 ring-forest/10">
+          <div class="absolute -inset-8 bg-forest/10 blur-3xl" style="clip-path: polygon(12% 0, 100% 0, 88% 100%, 0 100%);"></div>
+          <div class="hero-media-wrapper relative overflow-hidden border-2 border-forest/40 bg-charcoal-light shadow-[0_0_40px_rgba(198,240,74,0.12)]" style="clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);">
             <img src="assets/images/hero.jpg?v=20260608" alt="Premium landscaping project in Ottawa by Gordon Landscaping" width="1920" height="1440" class="h-[360px] w-full object-cover sm:h-[440px]" />
           </div>
           <div class="mt-4 grid grid-cols-3 gap-3 text-xs text-stone">
@@ -282,7 +288,7 @@
 
   <!-- Animated stats bar -->
   <section class="relative -mt-16 z-10 mx-auto max-w-6xl px-4">
-    <div class="reveal overflow-hidden rounded-2xl border-2 border-sage/20 bg-cream shadow-xl">
+    <div class="reveal overflow-hidden border-2 border-forest/30 bg-charcoal-light shadow-[0_0_30px_rgba(0,0,0,0.4)]">
       <div class="grid grid-cols-2 divide-x divide-sage/20 sm:grid-cols-4">
         <div class="stat-cell px-6 py-6 text-center sm:py-8">
           <span class="stat-number font-heading text-3xl font-bold text-forest sm:text-4xl" data-target="500">0</span>
