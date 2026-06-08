@@ -1,0 +1,24 @@
+{
+  "name": "gordon-landscaping-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewbgordon007/gordon-landscaping.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/matthewbgordon007/gordon-landscaping/issues"
+  },
+  "homepage": "https://github.com/matthewbgordon007/gordon-landscaping#readme",
+  "dependencies": {
+    "resend": "^6.12.4"
+  }
+}

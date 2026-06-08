@@ -82,9 +82,11 @@
 
     <div class="mt-10 grid gap-8 lg:grid-cols-3">
       <div class="reveal card rounded-[28px] border border-slate-200 bg-white p-8 lg:col-span-2 shadow-sm">
-        <!-- Netlify form -->
-        <form name="quote" method="POST" data-netlify="true" enctype="multipart/form-data" class="space-y-5">
-          <input type="hidden" name="form-name" value="quote" />
+        <form id="quote-form" name="quote" method="POST" action="/api/quote" class="space-y-5">
+          <!-- Honeypot: hidden from people, catches bots -->
+          <div class="hidden" aria-hidden="true">
+            <label>Company<input name="company" tabindex="-1" autocomplete="off" /></label>
+          </div>
 
           <div class="grid gap-5 md:grid-cols-2">
             <div>
@@ -152,15 +154,17 @@
 
           <div>
             <label class="text-sm text-slate-700 font-semibold">Upload photos (optional)</label>
-            <input name="photos" type="file" multiple
+            <input id="quote-photos" name="photos" type="file" multiple accept="image/*"
               class="mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700" />
             <p class="mt-2 text-xs text-slate-500">Tip: 2–4 photos from different angles is perfect.</p>
           </div>
 
-          <button type="submit"
-            class="glow w-full rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 text-sm font-semibold text-white hover:from-emerald-700 hover:to-teal-700">
+          <button id="quote-submit" type="submit"
+            class="glow w-full rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-3 text-sm font-semibold text-white hover:from-emerald-700 hover:to-teal-700 disabled:cursor-not-allowed disabled:opacity-60">
             Send Request
           </button>
+
+          <p id="quote-status" role="status" aria-live="polite" class="hidden text-sm"></p>
         </form>
       </div>
 

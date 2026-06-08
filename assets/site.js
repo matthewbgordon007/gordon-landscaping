@@ -173,6 +173,136 @@ function updateFloatingElements() {
 window.addEventListener("scroll", updateFloatingElements, { passive: true });
 backToTop?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
+// Quote form: compress photos in-browser, submit via fetch to /api/quote
+const quoteForm = document.getElementById("quote-form");
+if (quoteForm) {
+  const statusEl = document.getElementById("quote-status");
+  const submitBtn = document.getElementById("quote-submit");
+  const photosInput = document.getElementById("quote-photos");
+
+  const MAX_DIMENSION = 1600; // px on the longest edge
+  const JPEG_QUALITY = 0.7;
+  const MAX_PHOTOS = 6;
+
+  function setStatus(message, type) {
+    if (!statusEl) return;
+    statusEl.textContent = message;
+    statusEl.classList.remove("hidden", "text-emerald-700", "text-red-600", "text-slate-500");
+    statusEl.classList.add(
+      type === "success" ? "text-emerald-700" : type === "error" ? "text-red-600" : "text-slate-500"
+    );
+  }
+
+  function readFileAsDataURL(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  }
+
+  function loadImage(src) {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => resolve(img);
+      img.onerror = reject;
+      img.src = src;
+    });
+  }
+
+  async function compressImage(file) {
+    const dataUrl = await readFileAsDataURL(file);
+    // Non-images (or anything that fails to load) are skipped.
+    if (!file.type.startsWith("image/")) return null;
+    const img = await loadImage(dataUrl);
+    let { width, height } = img;
+    if (width > height && width > MAX_DIMENSION) {
+      height = Math.round((height * MAX_DIMENSION) / width);
+      width = MAX_DIMENSION;
+    } else if (height > MAX_DIMENSION) {
+      width = Math.round((width * MAX_DIMENSION) / height);
+      height = MAX_DIMENSION;
+    }
+    const canvas = document.createElement("canvas");
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0, width, height);
+    const out = canvas.toDataURL("image/jpeg", JPEG_QUALITY);
+    const base = (file.name || "photo").replace(/\.[^.]+$/, "");
+    return { name: `${base}.jpg`, data: out };
+  }
+
+  quoteForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending…";
+    }
+    setStatus("Preparing your request…", "info");
+
+    try {
+      const fd = new FormData(quoteForm);
+      const payload = {
+        name: fd.get("name"),
+        phone: fd.get("phone"),
+        email: fd.get("email"),
+        service: fd.get("service"),
+        location: fd.get("location"),
+        size: fd.get("size"),
+        timeline: fd.get("timeline"),
+        details: fd.get("details"),
+        company: fd.get("company"), // honeypot
+        photos: [],
+      };
+
+      const files = photosInput && photosInput.files ? Array.from(photosInput.files) : [];
+      if (files.length) {
+        setStatus("Optimizing photos…", "info");
+        for (const file of files.slice(0, MAX_PHOTOS)) {
+          try {
+            const compressed = await compressImage(file);
+            if (compressed) payload.photos.push(compressed);
+          } catch (err) {
+            // Skip a photo that can't be processed rather than failing the whole form.
+          }
+        }
+      }
+
+      setStatus("Sending your request…", "info");
+      const res = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await res.json().catch(() => ({}));
+
+      if (res.ok) {
+        quoteForm.reset();
+        setStatus("Thanks! Your request was sent. We'll be in touch shortly.", "success");
+        if (submitBtn) submitBtn.textContent = "Sent ✓";
+      } else {
+        setStatus(
+          result.error || "Sorry, something went wrong. Please call 613-720-9102.",
+          "error"
+        );
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Send Request";
+        }
+      }
+    } catch (err) {
+      setStatus("Network error. Please try again or call 613-720-9102.", "error");
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Send Request";
+      }
+    }
+  });
+}
+
 // FAQ accordion
 document.querySelectorAll(".faq-trigger").forEach((btn) => {
   btn.addEventListener("click", () => {
