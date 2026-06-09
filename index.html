@@ -204,89 +204,115 @@
   </nav>
 
   <!-- Hero - Full-height impact -->
-  <section class="geo-section relative min-h-[85vh] flex items-center overflow-hidden">
+  <section class="geo-section relative min-h-[88vh] flex flex-col overflow-hidden">
     <div class="geo-shape geo-shape--slash" aria-hidden="true"></div>
     <div class="geo-shape geo-shape--block" aria-hidden="true"></div>
     <div class="geo-shape geo-shape--hex hidden lg:block" aria-hidden="true"></div>
-    <div class="hero-watermark hidden lg:block" aria-hidden="true"></div>
+    <div class="hero-watermark hero-watermark--left hidden md:block" aria-hidden="true"></div>
+    <div class="hero-watermark hero-watermark--center hidden md:block" aria-hidden="true"></div>
+    <div class="hero-watermark hero-watermark--right hidden md:block" aria-hidden="true"></div>
     <div class="absolute inset-0 -z-10">
-      <img src="assets/images/hero.jpg?v=20260608" alt="" width="1920" height="1440" fetchpriority="high" class="h-full w-full object-cover opacity-40 saturate-125 contrast-110" />
-      <div class="absolute inset-0 bg-gradient-to-b from-charcoal via-charcoal/95 to-charcoal"></div>
-      <div class="absolute inset-0 bg-gradient-to-r from-charcoal via-transparent to-charcoal/80"></div>
+      <img src="assets/images/hero.jpg?v=20260608" alt="" width="1920" height="1440" fetchpriority="high" class="h-full w-full object-cover opacity-35 saturate-110 contrast-105" />
+      <div class="absolute inset-0 bg-gradient-to-b from-charcoal via-charcoal/92 to-charcoal"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-charcoal/90 via-charcoal/40 to-charcoal/85"></div>
     </div>
-    <div class="mx-auto max-w-6xl w-full px-4 py-20">
-      <div class="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
-        <div class="reveal">
+
+    <div class="mx-auto max-w-7xl w-full px-4 py-16 sm:py-20 flex-1 flex items-center">
+      <div class="grid w-full gap-10 lg:grid-cols-12 lg:items-center lg:gap-8">
+        <!-- Left: headline + CTAs -->
+        <div class="reveal lg:col-span-4">
           <p class="badge-rugged inline-flex items-center gap-2 border border-forest/40 bg-charcoal-light/80 px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-forest-light">
             <span class="stat-dot h-1.5 w-1.5"></span>
             Built Outdoors
           </p>
 
-          <h1 class="hero-display mt-6 text-5xl sm:text-6xl lg:text-7xl text-earth">
-            One-Stop Shop<br class="hidden sm:block" /> for Outdoor Spaces
+          <h1 class="hero-display mt-6 text-4xl sm:text-5xl xl:text-6xl text-earth">
+            One-Stop Shop<br /> for Outdoor Spaces
           </h1>
-          <div class="accent-bar mt-5 w-28"></div>
-          <p class="mt-4 text-sm font-bold uppercase tracking-[0.2em] text-forest">Ottawa &amp; Surrounding Area</p>
+          <div class="accent-bar mt-5"></div>
+          <p class="mt-4 text-sm font-bold uppercase tracking-[0.2em] text-forest-light">Ottawa &amp; Surrounding Area</p>
 
-          <p class="mt-6 text-base sm:text-lg text-stone max-w-xl leading-relaxed">
-            Fencing, decks, interlock, sod, turf, and custom structures — one crew handles it all to transform your property from front to back.
+          <p class="mt-5 text-base text-stone max-w-md leading-relaxed">
+            Fencing, decks, interlock, sod, turf, and custom structures — one crew handles it all.
           </p>
 
           <div class="mt-7 flex flex-col gap-3 sm:flex-row">
-            <a href="contact.html" class="glow btn-landscape inline-flex items-center justify-center rounded-2xl px-6 py-3 text-sm font-semibold">
+            <a href="contact.html" class="btn-landscape inline-flex items-center justify-center px-6 py-3 text-sm font-semibold">
               Request a Quote
             </a>
-            <a href="projects.html" class="inline-flex items-center justify-center rounded-2xl border-2 border-forest/30 bg-cream px-6 py-3 text-sm font-semibold text-forest hover:bg-forest/10">
+            <a href="projects.html" class="inline-flex items-center justify-center border-2 border-forest/40 px-6 py-3 text-sm font-semibold text-forest-light hover:bg-forest/15 transition-colors">
               View Projects
             </a>
           </div>
+        </div>
 
-          <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
-            <div class="hero-card rounded-2xl p-4">
-              <div class="text-sm font-semibold text-forest-light">Sod</div>
-              <div class="mt-1 text-xs text-stone">Prep · grade · install</div>
+        <!-- Center: big logo + Built Outdoors (fills the blank spot) -->
+        <div class="reveal hero-brand-panel lg:col-span-4" style="transition-delay: 100ms;">
+          <img
+            src="assets/images/logo.png"
+            alt=""
+            width="400"
+            height="400"
+            class="hero-brand-panel__logo"
+            aria-hidden="true"
+          />
+          <p class="hero-brand-panel__gordon">Gordon</p>
+          <p class="hero-brand-panel__landscaping">Landscaping</p>
+          <div class="hero-brand-panel__rule" aria-hidden="true"></div>
+          <p class="hero-brand-panel__slogan">Built Outdoors.</p>
+        </div>
+
+        <!-- Right: project photo -->
+        <div class="relative reveal lg:col-span-4" style="transition-delay: 200ms;">
+          <div class="absolute -inset-6 bg-forest/10 blur-3xl" style="clip-path: polygon(12% 0, 100% 0, 88% 100%, 0 100%);"></div>
+          <div class="hero-media-wrapper relative overflow-hidden border border-forest/30 bg-charcoal-light shadow-2xl" style="clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);">
+            <img src="assets/images/hero.jpg?v=20260608" alt="Premium landscaping project in Ottawa by Gordon Landscaping" width="1920" height="1440" class="h-[280px] w-full object-cover sm:h-[340px] lg:h-[380px]" />
+          </div>
+          <div class="mt-4 grid grid-cols-3 gap-2 text-xs text-stone">
+            <div class="hero-card rounded-2xl px-3 py-3 text-center">
+              <div class="font-semibold text-forest-light">Clean edging</div>
+              <div class="mt-1 hidden sm:block">Sharp lines</div>
             </div>
-            <div class="hero-card rounded-2xl p-4">
-              <div class="text-sm font-semibold text-forest-light">Interlock</div>
-              <div class="mt-1 text-xs text-stone">Patios · walkways</div>
+            <div class="hero-card rounded-2xl px-3 py-3 text-center">
+              <div class="font-semibold text-forest-light">Solid base</div>
+              <div class="mt-1 hidden sm:block">Built right</div>
             </div>
-            <div class="hero-card rounded-2xl p-4">
-              <div class="text-sm font-semibold text-forest-light">Artificial Turf</div>
-              <div class="mt-1 text-xs text-stone">Low-maintenance</div>
-            </div>
-            <div class="hero-card rounded-2xl p-4">
-              <div class="text-sm font-semibold text-forest-light">Decks</div>
-              <div class="mt-1 text-xs text-stone">Wood & composite</div>
-            </div>
-            <div class="hero-card rounded-2xl p-4">
-              <div class="text-sm font-semibold text-forest-light">Fencing</div>
-              <div class="mt-1 text-xs text-stone">Privacy · security</div>
-            </div>
-            <div class="hero-card rounded-2xl p-4">
-              <div class="text-sm font-semibold text-forest-light">Custom Builds</div>
-              <div class="mt-1 text-xs text-stone">Carports · pergolas</div>
+            <div class="hero-card rounded-2xl px-3 py-3 text-center">
+              <div class="font-semibold text-forest-light">Fast quotes</div>
+              <div class="mt-1 hidden sm:block">Clear scope</div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
 
-        <div class="relative reveal" style="transition-delay: 150ms;">
-          <div class="absolute -inset-8 bg-forest/10 blur-3xl" style="clip-path: polygon(12% 0, 100% 0, 88% 100%, 0 100%);"></div>
-          <div class="hero-media-wrapper relative overflow-hidden border border-forest/30 bg-charcoal-light shadow-2xl" style="clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);">
-            <img src="assets/images/hero.jpg?v=20260608" alt="Premium landscaping project in Ottawa by Gordon Landscaping" width="1920" height="1440" class="h-[360px] w-full object-cover sm:h-[440px]" />
+    <!-- Service strip — moved out of the gap -->
+    <div class="hero-services-strip relative z-10 w-full">
+      <div class="mx-auto max-w-7xl px-4 py-5">
+        <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          <div class="hero-card rounded-2xl p-3 text-center">
+            <div class="text-sm font-semibold text-forest-light">Sod</div>
+            <div class="mt-0.5 text-xs text-stone hidden sm:block">Prep · install</div>
           </div>
-          <div class="mt-4 grid grid-cols-3 gap-3 text-xs text-stone">
-            <div class="hero-card rounded-2xl px-3 py-3">
-              <div class="font-semibold text-forest-light">Clean edging</div>
-              <div class="mt-1">Sharp lines</div>
-            </div>
-            <div class="hero-card rounded-2xl px-3 py-3">
-              <div class="font-semibold text-forest-light">Solid base</div>
-              <div class="mt-1">Built right</div>
-            </div>
-            <div class="hero-card rounded-2xl px-3 py-3">
-              <div class="font-semibold text-forest-light">Fast quotes</div>
-              <div class="mt-1">Clear scope</div>
-            </div>
+          <div class="hero-card rounded-2xl p-3 text-center">
+            <div class="text-sm font-semibold text-forest-light">Interlock</div>
+            <div class="mt-0.5 text-xs text-stone hidden sm:block">Patios · walks</div>
+          </div>
+          <div class="hero-card rounded-2xl p-3 text-center">
+            <div class="text-sm font-semibold text-forest-light">Turf</div>
+            <div class="mt-0.5 text-xs text-stone hidden sm:block">Low maint.</div>
+          </div>
+          <div class="hero-card rounded-2xl p-3 text-center">
+            <div class="text-sm font-semibold text-forest-light">Decks</div>
+            <div class="mt-0.5 text-xs text-stone hidden sm:block">Wood · composite</div>
+          </div>
+          <div class="hero-card rounded-2xl p-3 text-center">
+            <div class="text-sm font-semibold text-forest-light">Fencing</div>
+            <div class="mt-0.5 text-xs text-stone hidden sm:block">Privacy · security</div>
+          </div>
+          <div class="hero-card rounded-2xl p-3 text-center">
+            <div class="text-sm font-semibold text-forest-light">Custom Builds</div>
+            <div class="mt-0.5 text-xs text-stone hidden sm:block">Carports · more</div>
           </div>
         </div>
       </div>
@@ -327,6 +353,46 @@
       <span class="flex items-center gap-2"><svg class="h-5 w-5 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Fast quote response</span>
       <span class="flex items-center gap-2"><svg class="h-5 w-5 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg> Ottawa, Kanata, Stittsville & more</span>
     </div>
+    </div>
+  </section>
+
+  <!-- Built Outdoors brand showcase -->
+  <section class="brand-showcase py-16 sm:py-20 lg:py-24" aria-label="Built Outdoors by Gordon Landscaping">
+    <div class="brand-showcase__watermark" aria-hidden="true"></div>
+    <div class="brand-showcase__watermark brand-showcase__watermark--2" aria-hidden="true"></div>
+    <div class="brand-showcase__watermark brand-showcase__watermark--3" aria-hidden="true"></div>
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="brand-showcase__inner reveal">
+        <div class="brand-showcase__logo-wrap">
+          <img
+            src="assets/images/logo.png"
+            alt="Gordon Landscaping Company logo"
+            width="512"
+            height="512"
+            class="brand-showcase__logo"
+          />
+          <p class="brand-showcase__title">Gordon</p>
+          <p class="brand-showcase__subtitle">Landscaping</p>
+          <p class="brand-showcase__slogan">Built Outdoors.</p>
+        </div>
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.2em] text-forest-muted">Your one-stop exterior crew</p>
+          <p class="mt-4 text-lg text-stone leading-relaxed max-w-xl">
+            From the truck to your yard — we bring the same bold standards to every project. One team for fencing, decks, interlock, sod, turf, and custom outdoor structures across Ottawa and the Valley.
+          </p>
+          <div class="brand-showcase__services mt-8">
+            <span class="brand-showcase__service">Interlock</span>
+            <span class="brand-showcase__service">Decks &amp; Fences</span>
+            <span class="brand-showcase__service">Sod &amp; Turf</span>
+            <span class="brand-showcase__service">Outdoor Structures</span>
+            <span class="brand-showcase__service">Full Yard</span>
+            <span class="brand-showcase__service">Ottawa &amp; Area</span>
+          </div>
+          <a href="contact.html" class="btn-landscape mt-8 inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold">
+            Get a quote →
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
