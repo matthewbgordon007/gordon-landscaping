@@ -46,8 +46,9 @@
             sage: { DEFAULT: '#243028', light: '#2f3d34' },
             stone: '#8a9a90',
             earth: '#eceee9',
-            cream: { DEFAULT: '#121816', dark: '#0c100e' },
-            charcoal: { DEFAULT: '#1a2420', light: '#1e2a24' }
+            cream: { DEFAULT: '#f2f6f3', dark: '#e4ece7' },
+            charcoal: { DEFAULT: '#121816', light: '#1a2420' },
+            ink: { DEFAULT: '#1a2e24', muted: '#4a5c52' }
           }
         }
       }
@@ -131,7 +132,7 @@
   </div>
 
   <!-- Top bar -->
-  <div class="border-b border-cream-dark bg-cream/90 backdrop-blur">
+  <div class="site-chrome border-b backdrop-blur">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 text-sm text-stone">
       <div class="flex items-center gap-3">
         <a class="hover:text-forest" href="tel:16137209102">613-720-9102</a>
@@ -145,7 +146,7 @@
   </div>
 
   <!-- Header -->
-  <header class="sticky top-0 z-50 border-b border-cream-dark bg-cream/95 backdrop-blur">
+  <header class="site-chrome sticky top-0 z-50 border-b backdrop-blur z-50">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
       <a href="index.html" class="flex items-center gap-3">
         <img
@@ -154,10 +155,10 @@
           class="h-10 w-10 object-contain"
         />
           <div class="leading-tight">
-          <div class="font-heading text-lg tracking-[0.06em] text-earth">Gordon</div>
+          <div class="font-heading text-lg tracking-[0.06em] text-ink">Gordon</div>
           <div class="font-heading text-sm tracking-[0.22em] text-forest">Landscaping</div>
-          <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-stone">Built Outdoors.</div>
-          <div class="text-xs text-stone">Ottawa, Ontario</div>
+          <div class="text-[10px] font-bold uppercase tracking-[0.2em] text-ink-muted">Built Outdoors.</div>
+          <div class="text-xs text-ink-muted">Ottawa, Ontario</div>
         </div>
       </a>
 
@@ -241,29 +242,29 @@
           </div>
 
           <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
-            <div class="card rounded-2xl border-2 border-sage/20 bg-cream-dark/30 p-4">
-              <div class="text-sm font-semibold text-forest">Sod</div>
-              <div class="mt-1 text-xs text-stone">Prep • grade • install</div>
+            <div class="hero-card rounded-2xl p-4">
+              <div class="text-sm font-semibold text-forest-light">Sod</div>
+              <div class="mt-1 text-xs text-stone">Prep · grade · install</div>
             </div>
-            <div class="card rounded-2xl border-2 border-sage/20 bg-cream-dark/30 p-4">
-              <div class="text-sm font-semibold text-forest">Interlock</div>
-              <div class="mt-1 text-xs text-stone">Patios • walkways</div>
+            <div class="hero-card rounded-2xl p-4">
+              <div class="text-sm font-semibold text-forest-light">Interlock</div>
+              <div class="mt-1 text-xs text-stone">Patios · walkways</div>
             </div>
-            <div class="card rounded-2xl border-2 border-sage/20 bg-cream-dark/30 p-4">
-              <div class="text-sm font-semibold text-forest">Artificial Turf</div>
+            <div class="hero-card rounded-2xl p-4">
+              <div class="text-sm font-semibold text-forest-light">Artificial Turf</div>
               <div class="mt-1 text-xs text-stone">Low-maintenance</div>
             </div>
-            <div class="card rounded-2xl border-2 border-sage/20 bg-cream-dark/30 p-4">
-              <div class="text-sm font-semibold text-forest">Decks</div>
+            <div class="hero-card rounded-2xl p-4">
+              <div class="text-sm font-semibold text-forest-light">Decks</div>
               <div class="mt-1 text-xs text-stone">Wood & composite</div>
             </div>
-            <div class="card rounded-2xl border-2 border-sage/20 bg-cream-dark/30 p-4">
-              <div class="text-sm font-semibold text-forest">Fencing</div>
-              <div class="mt-1 text-xs text-stone">Privacy • security</div>
+            <div class="hero-card rounded-2xl p-4">
+              <div class="text-sm font-semibold text-forest-light">Fencing</div>
+              <div class="mt-1 text-xs text-stone">Privacy · security</div>
             </div>
-            <div class="card rounded-2xl border-2 border-sage/20 bg-cream-dark/30 p-4">
-              <div class="text-sm font-semibold text-forest">Custom Builds</div>
-              <div class="mt-1 text-xs text-stone">Carports • pergolas</div>
+            <div class="hero-card rounded-2xl p-4">
+              <div class="text-sm font-semibold text-forest-light">Custom Builds</div>
+              <div class="mt-1 text-xs text-stone">Carports · pergolas</div>
             </div>
           </div>
         </div>
@@ -274,16 +275,16 @@
             <img src="assets/images/hero.jpg?v=20260608" alt="Premium landscaping project in Ottawa by Gordon Landscaping" width="1920" height="1440" class="h-[360px] w-full object-cover sm:h-[440px]" />
           </div>
           <div class="mt-4 grid grid-cols-3 gap-3 text-xs text-stone">
-            <div class="card rounded-2xl border-2 border-sage/20 bg-cream-dark/30 px-3 py-3">
-              <div class="font-semibold text-forest">Clean edging</div>
+            <div class="hero-card rounded-2xl px-3 py-3">
+              <div class="font-semibold text-forest-light">Clean edging</div>
               <div class="mt-1">Sharp lines</div>
             </div>
-            <div class="card rounded-2xl border-2 border-sage/20 bg-cream-dark/30 px-3 py-3">
-              <div class="font-semibold text-forest">Solid base</div>
+            <div class="hero-card rounded-2xl px-3 py-3">
+              <div class="font-semibold text-forest-light">Solid base</div>
               <div class="mt-1">Built right</div>
             </div>
-            <div class="card rounded-2xl border-2 border-sage/20 bg-cream-dark/30 px-3 py-3">
-              <div class="font-semibold text-forest">Fast quotes</div>
+            <div class="hero-card rounded-2xl px-3 py-3">
+              <div class="font-semibold text-forest-light">Fast quotes</div>
               <div class="mt-1">Clear scope</div>
             </div>
           </div>
@@ -294,7 +295,7 @@
 
   <!-- Animated stats bar -->
   <section class="relative -mt-16 z-10 mx-auto max-w-6xl px-4">
-    <div class="reveal overflow-hidden border-2 border-forest/30 bg-charcoal-light shadow-[0_0_30px_rgba(0,0,0,0.4)]">
+    <div class="reveal panel-light overflow-hidden">
       <div class="grid grid-cols-2 divide-x divide-sage/20 sm:grid-cols-4">
         <div class="stat-cell px-6 py-6 text-center sm:py-8">
           <span class="stat-number font-heading text-3xl font-bold text-forest sm:text-4xl" data-target="500">0</span>
@@ -319,22 +320,29 @@
   </section>
 
   <!-- Trust badges -->
-  <section class="mx-auto max-w-6xl px-4 py-8">
+  <section class="section-light section-light--slant-top py-10">
+    <div class="mx-auto max-w-6xl px-4">
     <div class="reveal flex flex-wrap justify-center gap-6 sm:gap-10 text-center text-sm text-stone">
       <span class="flex items-center gap-2"><svg class="h-5 w-5 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg> 500+ projects completed</span>
       <span class="flex items-center gap-2"><svg class="h-5 w-5 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Fast quote response</span>
       <span class="flex items-center gap-2"><svg class="h-5 w-5 text-forest" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg> Ottawa, Kanata, Stittsville & more</span>
     </div>
+    </div>
   </section>
 
   <!-- One-stop shop callout -->
-  <section class="geo-section mx-auto max-w-6xl px-4 py-14">
+  <section class="geo-section section-light py-16 sm:py-20">
+    <div class="geo-shape geo-shape--slash" aria-hidden="true"></div>
+    <div class="mx-auto max-w-6xl px-4">
     <div class="geo-shape geo-shape--ring hidden md:block" aria-hidden="true"></div>
     <div class="reveal frame-geo-accent">
       <div class="frame-geo-inner px-8 py-10 sm:px-12 sm:py-14">
         <div class="max-w-3xl">
-          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-forest-light">Built Outdoors</p>
-          <h2 class="mt-3 font-heading text-3xl sm:text-4xl text-earth">One contractor. Every exterior need.</h2>
+          <div class="section-label">
+            <span class="section-label__num">01</span>
+            <span class="section-label__text">Built Outdoors</span>
+          </div>
+          <h2 class="font-heading text-3xl sm:text-4xl text-earth">One contractor. Every exterior need.</h2>
           <div class="accent-bar mt-5"></div>
           <p class="mt-6 text-stone text-lg leading-relaxed">
             Need a new fence, a deck off the back door, interlock around the patio, fresh sod, and a custom carport? That's one quote, one timeline, one crew that knows your property. We handle landscaping, hardscaping, structures, and everything in between.
@@ -353,23 +361,27 @@
         </a>
       </div>
     </div>
+    </div>
   </section>
 
   <!-- Value strip -->
-  <section class="section-tint py-14">
-    <div class="divider-leaf"></div>
-    <div class="mx-auto max-w-6xl px-4 pt-12">
+  <section class="section-dark section-dark--slant-top py-16 sm:py-20">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="section-label reveal">
+        <span class="section-label__num">02</span>
+        <span class="section-label__text">Why Gordon</span>
+      </div>
       <div class="reveal grid gap-6 sm:grid-cols-3">
-        <div class="card rounded-2xl border-2 border-sage/20 bg-cream p-6">
-          <div class="text-sm font-semibold text-forest">Clear quotes</div>
+        <div class="card panel-dark rounded-2xl border p-6">
+          <div class="text-sm font-semibold text-forest-light">Clear quotes</div>
           <p class="mt-2 text-sm text-stone">No confusion. Straightforward scope and pricing.</p>
         </div>
-        <div class="card rounded-2xl border-2 border-sage/20 bg-cream p-6">
-          <div class="text-sm font-semibold text-forest">Proper prep</div>
+        <div class="card panel-dark rounded-2xl border p-6">
+          <div class="text-sm font-semibold text-forest-light">Proper prep</div>
           <p class="mt-2 text-sm text-stone">Base work and grading done right so it lasts.</p>
         </div>
-        <div class="card rounded-2xl border-2 border-sage/20 bg-cream p-6">
-          <div class="text-sm font-semibold text-forest">Clean finish</div>
+        <div class="card panel-dark rounded-2xl border p-6">
+          <div class="text-sm font-semibold text-forest-light">Clean finish</div>
           <p class="mt-2 text-sm text-stone">Tight edges, level lines, and a jobsite you’re proud of.</p>
         </div>
       </div>
@@ -377,7 +389,7 @@
   </section>
 
   <!-- Before / After slider -->
-  <section class="section-tint py-16 sm:py-20">
+  <section class="section-light py-16 sm:py-20">
     <div class="mx-auto max-w-6xl px-4">
       <div class="reveal text-center">
         <h2 class="font-heading text-3xl font-semibold tracking-tight text-earth sm:text-4xl">See the transformation</h2>
@@ -403,7 +415,8 @@
   </section>
 
   <!-- How it works - Process timeline -->
-  <section class="geo-section mx-auto max-w-6xl px-4 py-16 sm:py-20">
+  <section class="geo-section section-dark py-16 sm:py-20">
+    <div class="mx-auto max-w-6xl px-4">
     <div class="geo-shape geo-shape--slash opacity-50" aria-hidden="true" style="right:auto;left:-5%;clip-path:polygon(0 0,100% 15%,70% 100%,0 85%);"></div>
     <div class="reveal text-center">
       <h2 class="font-heading text-3xl font-semibold tracking-tight text-earth sm:text-4xl">How we work</h2>
@@ -434,11 +447,13 @@
         <p class="mt-2 text-sm text-stone">Final check and you're done. Built to last.</p>
       </div>
     </div>
+    </div>
   </section>
 
   <!-- Services preview -->
-  <section class="mx-auto max-w-6xl px-4 py-14">
-    <div class="divider-leaf"></div>
+  <section class="section-light py-16 sm:py-20">
+    <div class="geo-shape geo-shape--hex hidden lg:block" aria-hidden="true"></div>
+    <div class="mx-auto max-w-6xl px-4">
     <div class="reveal flex items-end justify-between gap-6 pt-4">
       <div>
         <h2 class="font-heading text-2xl font-semibold tracking-tight sm:text-3xl text-earth">Everything your yard needs</h2>
@@ -516,10 +531,11 @@
         </div>
       </a>
     </div>
+    </div>
   </section>
 
   <!-- Featured projects bento -->
-  <section class="section-tint py-16 sm:py-20">
+  <section class="section-dark py-16 sm:py-20">
     <div class="mx-auto max-w-6xl px-4">
       <div class="reveal flex items-end justify-between gap-6">
         <div>
@@ -533,16 +549,16 @@
       <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <div class="reveal bento-card relative col-span-2 row-span-2 overflow-hidden rounded-2xl border-2 border-sage/20 bg-cream min-h-[320px]">
           <img src="assets/images/carport-final.png" alt="Custom rustic wooden carport in wooded setting" class="h-full min-h-[280px] w-full object-cover" />
-          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-earth/80 to-transparent p-6">
-            <span class="mb-2 inline-flex w-fit rounded-full bg-forest/80 px-3 py-1 text-xs font-semibold text-cream">Custom build</span>
-            <h3 class="font-heading text-xl font-semibold text-cream">Rustic carport</h3>
-            <p class="text-sm text-cream/90">Wooden frame, metal roof • Ottawa area</p>
+          <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-charcoal/90 to-transparent p-6">
+            <span class="mb-2 inline-flex w-fit badge-rugged bg-forest px-3 py-1 text-xs font-semibold text-white">Custom build</span>
+            <h3 class="font-heading text-xl font-semibold text-earth">Rustic carport</h3>
+            <p class="text-sm text-stone">Wooden frame, metal roof · Ottawa area</p>
           </div>
         </div>
-        <div class="reveal bento-card overflow-hidden rounded-2xl border-2 border-sage/20 bg-cream">
+        <div class="reveal bento-card panel-dark overflow-hidden rounded-2xl border">
           <img src="assets/images/project-1.jpg?v=20260608" alt="Riverstone and mulch" class="h-44 w-full object-cover" />
           <div class="p-4">
-            <h3 class="font-heading font-semibold text-forest">Riverstone & mulch</h3>
+            <h3 class="font-heading font-semibold text-forest-light">Riverstone & mulch</h3>
           </div>
         </div>
         <div class="reveal bento-card overflow-hidden rounded-2xl border-2 border-sage/20 bg-cream">
@@ -568,14 +584,14 @@
   </section>
 
   <!-- FAQ Accordion -->
-  <section class="section-tint py-16 sm:py-20">
+  <section class="section-light py-16 sm:py-20">
     <div class="mx-auto max-w-6xl px-4">
       <div class="reveal text-center">
         <h2 class="font-heading text-3xl font-semibold tracking-tight text-earth sm:text-4xl">Landscaping FAQ</h2>
         <p class="mt-4 text-stone max-w-xl mx-auto">Common questions about sod, interlock, and turf in Ottawa and the area.</p>
       </div>
       <div class="reveal mt-10 space-y-3 max-w-3xl mx-auto">
-        <div class="faq-item overflow-hidden rounded-2xl border-2 border-sage/20 bg-cream">
+        <div class="faq-item card overflow-hidden rounded-2xl border bg-white">
           <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-forest hover:bg-cream-dark/50 transition-colors" aria-expanded="false" data-faq="1">
             <span>How much does sod installation cost in Ottawa?</span>
             <svg class="faq-icon h-5 w-5 text-sage flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -584,7 +600,7 @@
             <p class="text-stone text-sm leading-relaxed">Cost depends on square footage, access, grading needs, topsoil, and removal. Send photos and rough dimensions for a fast quote.</p>
           </div>
         </div>
-        <div class="faq-item overflow-hidden rounded-2xl border-2 border-sage/20 bg-cream">
+        <div class="faq-item card overflow-hidden rounded-2xl border bg-white">
           <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-forest hover:bg-cream-dark/50 transition-colors" aria-expanded="false" data-faq="2">
             <span>When is the best time for interlock in Ottawa?</span>
             <svg class="faq-icon h-5 w-5 text-sage flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -593,7 +609,7 @@
             <p class="text-stone text-sm leading-relaxed">Spring through fall works well. Proper base compaction is key—we avoid frozen ground.</p>
           </div>
         </div>
-        <div class="faq-item overflow-hidden rounded-2xl border-2 border-sage/20 bg-cream">
+        <div class="faq-item card overflow-hidden rounded-2xl border bg-white">
           <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-forest hover:bg-cream-dark/50 transition-colors" aria-expanded="false" data-faq="3">
             <span>How long does artificial turf last?</span>
             <svg class="faq-icon h-5 w-5 text-sage flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -602,7 +618,7 @@
             <p class="text-stone text-sm leading-relaxed">Quality artificial turf typically lasts 15–20+ years with minimal maintenance. Proper base prep extends its life.</p>
           </div>
         </div>
-        <div class="faq-item overflow-hidden rounded-2xl border-2 border-sage/20 bg-cream">
+        <div class="faq-item card overflow-hidden rounded-2xl border bg-white">
           <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-forest hover:bg-cream-dark/50 transition-colors" aria-expanded="false" data-faq="5">
             <span>Can you handle multiple exterior projects at once?</span>
             <svg class="faq-icon h-5 w-5 text-sage flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -611,7 +627,7 @@
             <p class="text-stone text-sm leading-relaxed">Yes. We're a one-stop shop for exterior work — fencing, decks, interlock, sod, turf, and custom structures. One team can coordinate your full outdoor transformation instead of juggling multiple contractors.</p>
           </div>
         </div>
-        <div class="faq-item overflow-hidden rounded-2xl border-2 border-sage/20 bg-cream">
+        <div class="faq-item card overflow-hidden rounded-2xl border bg-white">
           <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-6 py-5 text-left font-semibold text-forest hover:bg-cream-dark/50 transition-colors" aria-expanded="false" data-faq="4">
             <span>Do you serve Kanata, Stittsville, and Carleton Place?</span>
             <svg class="faq-icon h-5 w-5 text-sage flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -625,41 +641,46 @@
   </section>
 
   <!-- Service area map (text-based visual) -->
-  <section class="mx-auto max-w-6xl px-4 py-16">
+  <section class="section-dark py-16">
+    <div class="mx-auto max-w-6xl px-4">
     <div class="reveal text-center">
       <h2 class="font-heading text-2xl font-semibold text-earth sm:text-3xl">Areas we serve</h2>
       <p class="mt-2 text-stone">Landscaping across Ottawa and the Valley</p>
     </div>
     <div class="reveal mt-8 flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
-      <span class="rounded-full border-2 border-sage/30 bg-cream px-4 py-2 text-sm font-medium text-earth">Ottawa</span>
-      <span class="rounded-full border-2 border-sage/30 bg-cream px-4 py-2 text-sm font-medium text-earth">Kanata</span>
-      <span class="rounded-full border-2 border-sage/30 bg-cream px-4 py-2 text-sm font-medium text-earth">Stittsville</span>
-      <span class="rounded-full border-2 border-sage/30 bg-cream px-4 py-2 text-sm font-medium text-earth">Orléans</span>
-      <span class="rounded-full border-2 border-sage/30 bg-cream px-4 py-2 text-sm font-medium text-earth">Nepean</span>
-      <span class="rounded-full border-2 border-sage/30 bg-cream px-4 py-2 text-sm font-medium text-earth">Barrhaven</span>
-      <span class="rounded-full border-2 border-sage/30 bg-cream px-4 py-2 text-sm font-medium text-earth">Carp</span>
-      <span class="rounded-full border-2 border-sage/30 bg-cream px-4 py-2 text-sm font-medium text-earth">Carleton Place</span>
-      <span class="rounded-full border-2 border-sage/30 bg-cream px-4 py-2 text-sm font-medium text-earth">Calabogie</span>
-      <span class="rounded-full border-2 border-sage/30 bg-cream px-4 py-2 text-sm font-medium text-earth">Arnprior</span>
-      <span class="rounded-full border-2 border-sage/30 bg-cream px-4 py-2 text-sm font-medium text-earth">Perth</span>
-      <span class="rounded-full border-2 border-sage/30 bg-cream px-4 py-2 text-sm font-medium text-earth">Lanark</span>
+      <span class="tag-chip px-4 py-2 text-sm font-medium">Ottawa</span>
+      <span class="tag-chip px-4 py-2 text-sm font-medium">Kanata</span>
+      <span class="tag-chip px-4 py-2 text-sm font-medium">Stittsville</span>
+      <span class="tag-chip px-4 py-2 text-sm font-medium">Orléans</span>
+      <span class="tag-chip px-4 py-2 text-sm font-medium">Nepean</span>
+      <span class="tag-chip px-4 py-2 text-sm font-medium">Barrhaven</span>
+      <span class="tag-chip px-4 py-2 text-sm font-medium">Carp</span>
+      <span class="tag-chip px-4 py-2 text-sm font-medium">Carleton Place</span>
+      <span class="tag-chip px-4 py-2 text-sm font-medium">Calabogie</span>
+      <span class="tag-chip px-4 py-2 text-sm font-medium">Arnprior</span>
+      <span class="tag-chip px-4 py-2 text-sm font-medium">Perth</span>
+      <span class="tag-chip px-4 py-2 text-sm font-medium">Lanark</span>
+    </div>
     </div>
   </section>
 
   <!-- Testimonial -->
-  <section class="mx-auto max-w-6xl px-4 py-16 sm:py-20">
-    <div class="reveal overflow-hidden rounded-2xl border-2 border-sage/20 bg-cream p-8 sm:p-12 lg:p-16">
+  <section class="section-light py-16 sm:py-20">
+    <div class="mx-auto max-w-6xl px-4">
+    <div class="reveal panel-light overflow-hidden p-8 sm:p-12 lg:p-16">
       <blockquote class="text-center">
         <p class="font-heading text-2xl font-medium italic text-earth sm:text-3xl">"Professional from start to finish. The prep work was done right and the interlock looks fantastic. Would recommend."</p>
         <footer class="mt-6 text-stone">— Ottawa homeowner</footer>
       </blockquote>
     </div>
+    </div>
   </section>
 
   <!-- CTA -->
-  <section class="mx-auto max-w-6xl px-4 pb-16">
-    <div class="reveal overflow-hidden rounded-2xl border-2 border-forest/30 bg-forest p-1">
-      <div class="rounded-xl bg-cream p-8 sm:p-10">
+  <section class="section-dark pb-16 pt-8">
+    <div class="mx-auto max-w-6xl px-4">
+    <div class="reveal frame-geo-accent">
+      <div class="frame-geo-inner p-8 sm:p-10">
         <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <h2 class="font-heading text-2xl font-semibold tracking-tight text-earth">Ready to transform your outdoor space?</h2>
@@ -669,17 +690,18 @@
             <a href="contact.html" class="glow btn-landscape inline-flex items-center justify-center rounded-2xl px-6 py-3 text-sm font-semibold">
               Request a Quote
             </a>
-            <a href="tel:16137209102" class="inline-flex items-center justify-center rounded-2xl border-2 border-forest/40 bg-cream px-6 py-3 text-sm font-semibold text-forest hover:bg-forest/10">
+            <a href="tel:16137209102" class="btn-outline inline-flex items-center justify-center px-6 py-3 text-sm font-semibold">
               Call 613-720-9102
             </a>
           </div>
         </div>
       </div>
     </div>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="border-t-2 border-cream-dark bg-cream-dark/60">
+  <footer class="section-dark border-t border-border-dark">
     <div class="divider-leaf"></div>
     <div class="mx-auto max-w-6xl px-4 py-10">
       <div class="grid gap-8 md:grid-cols-3">

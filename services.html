@@ -23,7 +23,7 @@
   <meta name="twitter:image" content="https://gordonlandscaping.ca/assets/images/hero.jpg?v=20260608" />
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Barlow','ui-sans-serif','system-ui','sans-serif'],heading:['Bebas Neue','Oswald','ui-sans-serif','sans-serif']},colors:{forest:{DEFAULT:'#2d6a4f',light:'#52b788',dark:'#1b4332'},sage:{DEFAULT:'#243028',light:'#2f3d34'},stone:'#8a9a90',earth:'#eceee9',cream:{DEFAULT:'#121816',dark:'#0c100e'},charcoal:{DEFAULT:'#1a2420',light:'#1e2a24'}}}}};</script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Barlow','ui-sans-serif','system-ui','sans-serif'],heading:['Bebas Neue','Oswald','ui-sans-serif','sans-serif']},colors:{forest:{DEFAULT:'#2d6a4f',light:'#52b788',dark:'#1b4332'},sage:{DEFAULT:'#243028',light:'#2f3d34'},stone:'#8a9a90',earth:'#eceee9',cream:{DEFAULT:'#f2f6f3',dark:'#e4ece7'},charcoal:{DEFAULT:'#121816',light:'#1a2420'},ink:{DEFAULT:'#1a2e24',muted:'#4a5c52'}}}};</script>
   <link rel="stylesheet" href="assets/site.css" />
 
   <!-- LocalBusiness schema -->
@@ -49,7 +49,7 @@
     Fencing · Decks · Interlock · Sod · Turf · Custom Builds
     <a href="contact.html" class="ml-2 font-semibold text-forest-light hover:text-earth transition-colors">Get a quote →</a>
   </div>
-  <div class="border-b border-sage/20 bg-cream/90 backdrop-blur">
+  <div class="site-chrome border-b backdrop-blur">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 text-sm text-stone">
       <div class="flex items-center gap-3">
         <a class="hover:text-forest" href="tel:16137209102">613-720-9102</a>
@@ -59,7 +59,7 @@
       <div class="hidden sm:block">Ottawa • Kanata • Stittsville • Orléans • Nepean • Barrhaven • Carp • Carleton Place • Calabogie • Arnprior • Perth • Lanark</div>
     </div>
   </div>
-  <header class="sticky top-0 z-50 border-b border-sage/20 bg-cream/90 backdrop-blur">
+  <header class="sticky top-0 z-50 site-chrome border-b backdrop-blur">
     <div class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
         <img src="assets/images/logo.png" alt="Gordon Landscaping Company logo" class="h-10 w-10 object-contain" />
@@ -123,7 +123,15 @@
     </div>
 
     <!-- Service cards (SEO links) -->
-    <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  </main>
+
+  <section class="section-light py-16">
+    <div class="mx-auto max-w-6xl px-4">
+    <div class="section-label">
+      <span class="section-label__num">01</span>
+      <span class="section-label__text">Services</span>
+    </div>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <a href="sod-installation-ottawa.html" class="reveal card overflow-hidden rounded-3xl border-2 border-sage/20 bg-cream hover:bg-cream">
         <img src="assets/images/sod-1.jpg?v=20260608" alt="Fresh sod installation in Ottawa" class="h-48 w-full object-cover" loading="lazy" />
         <div class="p-7">
@@ -258,9 +266,10 @@
         </div>
       </div>
     </section>
-  </main>
+    </div>
+  </section>
 
-  <footer class="border-t-2 border-cream-dark bg-cream-dark/60">
+  <footer class="section-dark border-t">
     <div class="divider-leaf"></div>
     <div class="mx-auto max-w-6xl px-4 py-10">
       <div class="grid gap-8 md:grid-cols-3">
