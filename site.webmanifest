@@ -4,8 +4,8 @@
   "description": "Built Outdoors by Gordon Landscaping — your one-stop shop for exterior work in Ottawa.",
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#141414",
-  "background_color": "#141414",
+  "theme_color": "#121816",
+  "background_color": "#121816",
   "icons": [
     {
       "src": "/assets/images/logo.png",

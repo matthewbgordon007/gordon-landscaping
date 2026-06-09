@@ -42,12 +42,12 @@
             heading: ['Bebas Neue', 'Oswald', 'ui-sans-serif', 'sans-serif']
           },
           colors: {
-            forest: { DEFAULT: '#c6f04a', light: '#d9ff6b', dark: '#9bc02e' },
-            sage: { DEFAULT: '#2a2a2a', light: '#3d3d3d' },
-            stone: '#8a8a8a',
-            earth: '#f0f0f0',
-            cream: { DEFAULT: '#141414', dark: '#0a0a0a' },
-            charcoal: { DEFAULT: '#1c1c1c', light: '#252525' }
+            forest: { DEFAULT: '#2d6a4f', light: '#52b788', dark: '#1b4332' },
+            sage: { DEFAULT: '#243028', light: '#2f3d34' },
+            stone: '#8a9a90',
+            earth: '#eceee9',
+            cream: { DEFAULT: '#121816', dark: '#0c100e' },
+            charcoal: { DEFAULT: '#1a2420', light: '#1e2a24' }
           }
         }
       }
@@ -58,7 +58,7 @@
   <link rel="icon" href="assets/images/logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="assets/images/logo.png" />
   <link rel="manifest" href="site.webmanifest" />
-  <meta name="theme-color" content="#141414" />
+  <meta name="theme-color" content="#121816" />
 
   <!-- LocalBusiness schema -->
   <script type="application/ld+json">
@@ -123,8 +123,11 @@
 
 <body class="bg-animated text-earth">
   <!-- Seasonal banner -->
-  <div class="bg-forest text-cream text-center py-2 px-4 text-sm font-medium">
-    <span class="hidden sm:inline">BUILT OUTDOORS — </span>Fencing • Decks • Interlock • Sod • Turf • Custom Builds <a href="contact.html" class="underline font-bold hover:opacity-80 ml-1">GET A QUOTE →</a>
+  <div class="promo-bar text-center py-2.5 px-4 text-sm">
+    <span class="hidden sm:inline font-heading tracking-widest text-forest-light">Built Outdoors</span>
+    <span class="hidden sm:inline text-stone mx-2">|</span>
+    Fencing · Decks · Interlock · Sod · Turf · Custom Builds
+    <a href="contact.html" class="ml-2 font-semibold text-forest-light hover:text-earth transition-colors">Get a quote →</a>
   </div>
 
   <!-- Top bar -->
@@ -200,7 +203,10 @@
   </nav>
 
   <!-- Hero - Full-height impact -->
-  <section class="relative min-h-[85vh] flex items-center overflow-hidden">
+  <section class="geo-section relative min-h-[85vh] flex items-center overflow-hidden">
+    <div class="geo-shape geo-shape--slash" aria-hidden="true"></div>
+    <div class="geo-shape geo-shape--block" aria-hidden="true"></div>
+    <div class="geo-shape geo-shape--hex hidden lg:block" aria-hidden="true"></div>
     <div class="hero-watermark hidden lg:block" aria-hidden="true"></div>
     <div class="absolute inset-0 -z-10">
       <img src="assets/images/hero.jpg?v=20260608" alt="" width="1920" height="1440" fetchpriority="high" class="h-full w-full object-cover opacity-40 saturate-125 contrast-110" />
@@ -210,8 +216,8 @@
     <div class="mx-auto max-w-6xl w-full px-4 py-20">
       <div class="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
         <div class="reveal">
-          <p class="badge-rugged inline-flex items-center gap-2 border border-forest/60 bg-charcoal-light px-5 py-2 text-xs font-bold uppercase tracking-[0.28em] text-forest shadow-[0_0_20px_rgba(198,240,74,0.15)]">
-            <span class="stat-dot h-2 w-2 animate-pulse"></span>
+          <p class="badge-rugged inline-flex items-center gap-2 border border-forest/40 bg-charcoal-light/80 px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-forest-light">
+            <span class="stat-dot h-1.5 w-1.5"></span>
             Built Outdoors
           </p>
 
@@ -264,7 +270,7 @@
 
         <div class="relative reveal" style="transition-delay: 150ms;">
           <div class="absolute -inset-8 bg-forest/10 blur-3xl" style="clip-path: polygon(12% 0, 100% 0, 88% 100%, 0 100%);"></div>
-          <div class="hero-media-wrapper relative overflow-hidden border-2 border-forest/40 bg-charcoal-light shadow-[0_0_40px_rgba(198,240,74,0.12)]" style="clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);">
+          <div class="hero-media-wrapper relative overflow-hidden border border-forest/30 bg-charcoal-light shadow-2xl" style="clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);">
             <img src="assets/images/hero.jpg?v=20260608" alt="Premium landscaping project in Ottawa by Gordon Landscaping" width="1920" height="1440" class="h-[360px] w-full object-cover sm:h-[440px]" />
           </div>
           <div class="mt-4 grid grid-cols-3 gap-3 text-xs text-stone">
@@ -322,26 +328,27 @@
   </section>
 
   <!-- One-stop shop callout -->
-  <section class="mx-auto max-w-6xl px-4 py-14">
-    <div class="reveal overflow-hidden rounded-2xl border-2 border-forest/30 bg-forest p-1">
-      <div class="rounded-xl bg-cream px-8 py-10 sm:px-12 sm:py-12">
+  <section class="geo-section mx-auto max-w-6xl px-4 py-14">
+    <div class="geo-shape geo-shape--ring hidden md:block" aria-hidden="true"></div>
+    <div class="reveal frame-geo-accent">
+      <div class="frame-geo-inner px-8 py-10 sm:px-12 sm:py-14">
         <div class="max-w-3xl">
-          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-forest">Built Outdoors</p>
-          <p class="mt-2 text-sm font-semibold text-forest">One contractor. Every exterior need.</p>
-          <h2 class="mt-3 font-heading text-2xl font-semibold tracking-tight text-earth sm:text-4xl">We do it all — so you don't juggle five different trades.</h2>
-          <p class="mt-4 text-stone text-lg">
-            Need a new fence, a deck off the back door, interlock around the patio, fresh sod, and a custom carport? That's one quote, one timeline, one crew that knows your property. We handle landscaping, hardscaping, structures, and everything in between to transform your outdoor spaces.
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-forest-light">Built Outdoors</p>
+          <h2 class="mt-3 font-heading text-3xl sm:text-4xl text-earth">One contractor. Every exterior need.</h2>
+          <div class="accent-bar mt-5"></div>
+          <p class="mt-6 text-stone text-lg leading-relaxed">
+            Need a new fence, a deck off the back door, interlock around the patio, fresh sod, and a custom carport? That's one quote, one timeline, one crew that knows your property. We handle landscaping, hardscaping, structures, and everything in between.
           </p>
         </div>
         <div class="mt-8 flex flex-wrap gap-2">
-          <span class="rounded-full border border-sage/30 bg-cream-dark/50 px-4 py-2 text-sm font-medium text-earth">Sod</span>
-          <span class="rounded-full border border-sage/30 bg-cream-dark/50 px-4 py-2 text-sm font-medium text-earth">Interlock</span>
-          <span class="rounded-full border border-sage/30 bg-cream-dark/50 px-4 py-2 text-sm font-medium text-earth">Artificial Turf</span>
-          <span class="rounded-full border border-sage/30 bg-cream-dark/50 px-4 py-2 text-sm font-medium text-earth">Decks</span>
-          <span class="rounded-full border border-sage/30 bg-cream-dark/50 px-4 py-2 text-sm font-medium text-earth">Fencing</span>
-          <span class="rounded-full border border-sage/30 bg-cream-dark/50 px-4 py-2 text-sm font-medium text-earth">Custom Structures</span>
+          <span class="tag-chip px-4 py-2 text-sm font-medium text-earth">Sod</span>
+          <span class="tag-chip px-4 py-2 text-sm font-medium text-earth">Interlock</span>
+          <span class="tag-chip px-4 py-2 text-sm font-medium text-earth">Artificial Turf</span>
+          <span class="tag-chip px-4 py-2 text-sm font-medium text-earth">Decks</span>
+          <span class="tag-chip px-4 py-2 text-sm font-medium text-earth">Fencing</span>
+          <span class="tag-chip px-4 py-2 text-sm font-medium text-earth">Custom Structures</span>
         </div>
-        <a href="contact.html" class="glow btn-landscape mt-8 inline-flex items-center justify-center rounded-2xl px-6 py-3 text-sm font-semibold">
+        <a href="contact.html" class="btn-landscape mt-8 inline-flex items-center justify-center px-6 py-3 text-sm font-semibold">
           Get a quote for your whole project →
         </a>
       </div>
@@ -396,7 +403,8 @@
   </section>
 
   <!-- How it works - Process timeline -->
-  <section class="mx-auto max-w-6xl px-4 py-16 sm:py-20">
+  <section class="geo-section mx-auto max-w-6xl px-4 py-16 sm:py-20">
+    <div class="geo-shape geo-shape--slash opacity-50" aria-hidden="true" style="right:auto;left:-5%;clip-path:polygon(0 0,100% 15%,70% 100%,0 85%);"></div>
     <div class="reveal text-center">
       <h2 class="font-heading text-3xl font-semibold tracking-tight text-earth sm:text-4xl">How we work</h2>
       <p class="mt-4 text-stone">Simple, transparent process from first call to final walkthrough.</p>

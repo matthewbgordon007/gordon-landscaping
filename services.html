@@ -12,7 +12,7 @@
   <link rel="icon" href="assets/images/logo.png" type="image/png" />
   <link rel="apple-touch-icon" href="assets/images/logo.png" />
   <link rel="manifest" href="site.webmanifest" />
-  <meta name="theme-color" content="#141414" />
+  <meta name="theme-color" content="#121816" />
 
   <meta property="og:title" content="Services | Gordon Landscaping Company" />
   <meta property="og:description" content="One-stop shop for exterior work in Ottawa — sod, interlock, turf, decks, fencing, and custom structures." />
@@ -23,7 +23,7 @@
   <meta name="twitter:image" content="https://gordonlandscaping.ca/assets/images/hero.jpg?v=20260608" />
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Barlow','ui-sans-serif','system-ui','sans-serif'],heading:['Bebas Neue','Oswald','ui-sans-serif','sans-serif']},colors:{forest:{DEFAULT:'#c6f04a',light:'#d9ff6b',dark:'#9bc02e'},sage:{DEFAULT:'#2a2a2a',light:'#3d3d3d'},stone:'#8a8a8a',earth:'#f0f0f0',cream:{DEFAULT:'#141414',dark:'#0a0a0a'},charcoal:{DEFAULT:'#1c1c1c',light:'#252525'}}}}};</script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Barlow','ui-sans-serif','system-ui','sans-serif'],heading:['Bebas Neue','Oswald','ui-sans-serif','sans-serif']},colors:{forest:{DEFAULT:'#2d6a4f',light:'#52b788',dark:'#1b4332'},sage:{DEFAULT:'#243028',light:'#2f3d34'},stone:'#8a9a90',earth:'#eceee9',cream:{DEFAULT:'#121816',dark:'#0c100e'},charcoal:{DEFAULT:'#1a2420',light:'#1e2a24'}}}}};</script>
   <link rel="stylesheet" href="assets/site.css" />
 
   <!-- LocalBusiness schema -->
@@ -43,8 +43,11 @@
 
 <body class="bg-animated text-earth">
   <!-- Seasonal banner -->
-  <div class="bg-forest text-cream text-center py-2 px-4 text-sm font-medium">
-    <span class="hidden sm:inline">BUILT OUTDOORS — </span>Fencing • Decks • Interlock • Sod • Turf • Custom Builds <a href="contact.html" class="underline font-bold hover:opacity-80 ml-1">GET A QUOTE →</a>
+  <div class="promo-bar text-center py-2.5 px-4 text-sm">
+    <span class="hidden sm:inline font-heading tracking-widest text-forest-light">Built Outdoors</span>
+    <span class="hidden sm:inline text-stone mx-2">|</span>
+    Fencing · Decks · Interlock · Sod · Turf · Custom Builds
+    <a href="contact.html" class="ml-2 font-semibold text-forest-light hover:text-earth transition-colors">Get a quote →</a>
   </div>
   <div class="border-b border-sage/20 bg-cream/90 backdrop-blur">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-2 text-sm text-stone">
@@ -97,10 +100,14 @@
     </div>
   </nav>
 
-  <main class="mx-auto max-w-6xl px-4 py-14">
+  <main class="geo-section mx-auto max-w-6xl px-4 py-14">
+    <div class="geo-shape geo-shape--slash opacity-40" aria-hidden="true"></div>
+    <div class="geo-shape geo-shape--hex hidden lg:block" aria-hidden="true" style="top:20%;left:5%;right:auto;"></div>
     <!-- Page intro -->
     <div class="reveal">
-      <h1 class="font-heading text-3xl font-semibold tracking-tight sm:text-5xl">Your One-Stop Shop for Exterior Work</h1>
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-forest-light">Built Outdoors</p>
+      <h1 class="mt-2 font-heading text-3xl font-semibold tracking-tight sm:text-5xl">Your One-Stop Shop for Exterior Work</h1>
+      <div class="accent-bar mt-5"></div>
       <p class="mt-4 text-stone max-w-3xl">
         From fencing and decks to interlock and sod — plus custom carports, pergolas, and outdoor structures — we handle it all. One team, one timeline, one property transformation. Proper prep comes first. Clean finish is standard.
       </p>
