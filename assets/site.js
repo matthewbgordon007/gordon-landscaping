@@ -11,9 +11,23 @@ const io = new IntersectionObserver(
       }
     }
   },
-  { threshold: 0.1, rootMargin: "0px 0px -20px 0px" }
+  { threshold: 0.08, rootMargin: "0px 0px 8% 0px" }
 );
-revealEls.forEach((el) => io.observe(el));
+revealEls.forEach((el) => {
+  if (el.classList.contains("reveal-now")) {
+    el.classList.add("in");
+    return;
+  }
+  io.observe(el);
+});
+// Show anything already in the viewport on load (no blank scroll gap)
+requestAnimationFrame(() => {
+  revealEls.forEach((el) => {
+    if (el.classList.contains("in")) return;
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.92) el.classList.add("in");
+  });
+});
 
 // Footer year
 const yearEl = document.getElementById("year");
